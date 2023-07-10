@@ -2,7 +2,7 @@ class GameManager {
   constructor() {}
 
   loadGames() {
-    const uv = require('./uv.js');
+    const uv = require('https://cdn.jsdelivr.net/gh/OutRed/Incor@main/js/uv.js');
     uv.load();
 
     const searchInput = document.querySelector('.search input');
