@@ -1,10 +1,10 @@
-import uv from './uv.js';
-
 class appsManager {
     constructor() {
     }
 
-    loadApps = () => {
+    loadApps() {
+
+        
         uv.load();
 
         const searchInput = document.querySelector('.search input');
@@ -81,8 +81,9 @@ class appsManager {
 
                     document.querySelector('.apps').appendChild(el);
                 });
-            })
+            });
     }
 }
 
-export default new appsManager();
+const appsManagerInstance = new appsManager();
+export default appsManagerInstance;
