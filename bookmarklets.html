@@ -1,0 +1,596 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bookmarklets | Incorhosting</title>
+	
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/OutRed/Incor@main/css/main.css">
+    <link href="./images/logo.png" rel="icon" />
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-B5MYT5J8LH"></script>
+   <script async src="https://arc.io/widget.min.js#U4o8gDrC"></script>
+  <script type="text/javascript">
+	atOptions = {
+		'key' : '7a33ea3bd131ec5ad5051e8181267d9c',
+		'format' : 'iframe',
+		'height' : 90,
+		'width' : 728,
+		'params' : {}
+	};
+	document.write('<scr' + 'ipt type="text/javascript" src="http' + (location.protocol === 'https:' ? 's' : '') + '://www.profitabledisplaynetwork.com/7a33ea3bd131ec5ad5051e8181267d9c/invoke.js"></scr' + 'ipt>');
+</script><br><br>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-B5MYT5J8LH');
+</script>
+      <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4225845178810062"
+     crossorigin="anonymous"></script>
+    <link href="./css/index.css" rel="stylesheet" />
+    <link href="assets/css/main.css" rel="stylesheet" />
+    <script>!function (e) { if ("object" == typeof exports && "undefined" != typeof module) module.exports = e(); else if ("function" == typeof define && define.amd) define([], e); else { var o; (o = "undefined" != typeof window ? window : "undefined" != typeof global ? global : "undefined" != typeof self ? self : this).outdatedBrowserRework = e() } }(function () {
+            var e; return (function () { function e(o, r, i) { function a(t, l) { if (!r[t]) { if (!o[t]) { var n = "function" == typeof require && require; if (!l && n) return n(t, !0); if (s) return s(t, !0); var u = Error("Cannot find module '" + t + "'"); throw u.code = "MODULE_NOT_FOUND", u } var d = r[t] = { exports: {} }; o[t][0].call(d.exports, function (e) { return a(o[t][1][e] || e) }, d, d.exports, e, o, r, i) } return r[t].exports } for (var s = "function" == typeof require && require, t = 0; t < i.length; t++)a(i[t]); return a } return e })()({
+                1: [function (e, o, r) { var i = { Chrome: 101, Edge: 99, Safari: 14, "Mobile Safari": 14, Opera: 99, Firefox: 109, Vivaldi: 1, IE: 11 }, a = { 12: .1, 13: 21, 14: 31, 15: 39, 16: 41, 17: 42, 18: 44 }, s = function (e, o) { for (var r in o) e[r] = o[r]; return e }; o.exports = function (e, o) { var r, t = o.browserSupport ? s(i, o.browserSupport) : i, l = o.requiredCssProperty || !1, n = e.browser.name; o.requireChromeOnAndroid && (r = "Android" === e.os.name && "Chrome" !== e.browser.name); var u, d = (u = !1, n in t ? t[n] || (u = !0) : o.isUnknownBrowserOK || (u = !0), u); return { isAndroidButNotChrome: r, isBrowserOutOfDate: function () { var o = e.browser.version, r = e.browser.major, i = e.os.name, s = e.os.version; "Edge" === n && r <= 18 && (r = a[r]), "Firefox" === n && "iOS" === i && (n = "Mobile Safari", o = s, r = s.substring(0, s.indexOf("."))); var l = !1; if (d) l = !0; else if (n in t) { var u = t[n]; if ("object" == typeof u) { var p, w = u.major, c = u.minor; r < w ? l = !0 : r == w && (p = o).replace(/[^\d.]/g, "").split(".")[1] < c && (l = !0) } else r < u && (l = !0) } return l }(), isBrowserUnsupported: d, isPropertySupported: function (e) { if (!e) return !0; var o = document.createElement("div"), r = ["khtml", "ms", "o", "moz", "webkit"], i = r.length; if (e in o.style) return !0; for (e = e.replace(/^[a-z]/, function (e) { return e.toUpperCase() }); i--;)if (r[i] + e in o.style) return !0; return !1 }(l) } } }, {}], 2: [function (e, o, r) { o.exports = function e() { if (arguments.length < 1 || "object" != typeof arguments[0]) return !1; if (arguments.length < 2) return arguments[0]; for (var o = arguments[0], r = 1; r < arguments.length; r++) { var i = arguments[r]; for (var a in i) { var s = o[a], t = i[a]; "object" != typeof t || null === t ? o[a] = t : "object" != typeof s || null === s ? o[a] = e({}, t) : o[a] = e(s, t) } } return o } }, {}], 3: [function (e, o, r) { var i = e("./evaluateBrowser"), a = e("./languages.json"), s = e("./extend"), t = e("ua-parser-js"), l = { salmon: "#f25648", white: "white" }; o.exports = function (e) { var o = function () { var o = new t(navigator.userAgent).getResult(), r = document.getElementById("outdated"); e = e || {}; var n = window.navigator.language || window.navigator.userLanguage, u = e.backgroundColor || l.salmon, d = e.textColor || l.white, p = e.fullscreen || !1, w = e.language || n.slice(0, 2), c = "web"; "Android" === o.os.name ? c = "googlePlay" : "iOS" === o.os.name && (c = "appStore"); var g = !1, m = !0, b = function (e) { r.style.opacity = e / 100, r.style.filter = "alpha(opacity=" + e + ")" }, f = function (e) { b(e), 1 === e && (r.style.display = "table"), 100 === e && (m = !0) }, h = function (e) { return function () { f(e) } }, v = i(o, e); if (v.isAndroidButNotChrome || v.isBrowserOutOfDate || !v.isPropertySupported) { if (g = v.isBrowserUnsupported, m && "1" !== r.style.opacity) { m = !1; for (var y = 1; y <= 100; y++)setTimeout(h(y), 8 * y) } var S, k, A, P, $, _, O, z = document.getElementById("outdated"); p && z.classList.add("fullscreen"), z.innerHTML = (P = ({ web: "<p>" + (A = s({}, k = a[S = w] || a.en, e.messages && e.messages[S])).update.web + (A.url ? '<a id="buttonUpdateBrowser" rel="nofollow" href="' + A.url + '">' + A.callToAction + "</a>" : "") + "</p>", googlePlay: "<p>" + A.update.googlePlay + '<a id="buttonUpdateBrowser" rel="nofollow" href="https://play.google.com/store/apps/details?id=com.android.chrome">' + A.callToAction + "</a></p>", appStore: "<p>" + A.update[c] + "</p>" })[c], $ = A.outOfDate, g && A.unsupported && ($ = A.unsupported), '<div class="vertical-center"><h6>' + $ + "</h6>" + P + '<p class="last"><a href="#" id="buttonCloseUpdateBrowser" title="' + A.close + '">&times;</a></p></div>'), _ = document.getElementById("buttonCloseUpdateBrowser"), O = document.getElementById("buttonUpdateBrowser"), r.style.backgroundColor = u, r.style.color = d, r.children[0].children[0].style.color = d, r.children[0].children[1].style.color = d, O && (O.style.color = d, O.style.borderColor && (O.style.borderColor = d), O.onmouseover = function () { this.style.color = u, this.style.backgroundColor = d }, O.onmouseout = function () { this.style.color = d, this.style.backgroundColor = u }), _.style.color = d, _.onmousedown = function () { return r.style.display = "none", !1 } } }, r = window.onload; "function" != typeof window.onload ? window.onload = o : window.onload = function () { r && r(), o() } } }, { "./evaluateBrowser": 1, "./extend": 2, "./languages.json": 4, "ua-parser-js": 5 }], 4: [function (e, o, r) { o.exports = { ko: { outOfDate: "최신 브라우저가 아닙니다!", update: { web: "웹사이트를 제대로 보려면 브라우저를 업데이트하세요.", googlePlay: "Google Play에서 Chrome을 설치하세요", appStore: "설정 앱에서 iOS를 업데이트하세요" }, url: "https://browser-update.org/update-browser.html", callToAction: "지금 브라우저 업데이트하기", close: "닫기" }, ja: { outOfDate: "古いブラウザをお使いのようです。", update: { web: "ウェブサイトを正しく表示できるように、ブラウザをアップデートしてください。", googlePlay: "Google PlayからChromeをインストールしてください", appStore: "設定からiOSをアップデートしてください" }, url: "https://browser-update.org/update-browser.html", callToAction: "今すぐブラウザをアップデートする", close: "閉じる" }, br: { outOfDate: "O seu navegador est&aacute; desatualizado!", update: { web: "Atualize o seu navegador para ter uma melhor experi&ecirc;ncia e visualiza&ccedil;&atilde;o deste site. ", googlePlay: "Please install Chrome from Google Play", appStore: "Please update iOS from the Settings App" }, url: "https://browser-update.org/update-browser.html", callToAction: "Atualize o seu navegador agora", close: "Fechar" }, ca: { outOfDate: "El vostre navegador no est\xe0 actualitzat!", update: { web: "Actualitzeu el vostre navegador per veure correctament aquest lloc web. ", googlePlay: "Instal\xb7leu Chrome des de Google Play", appStore: "Actualitzeu iOS des de l'aplicaci\xf3 Configuraci\xf3" }, url: "https://browser-update.org/update-browser.html", callToAction: "Actualitzar el meu navegador ara", close: "Tancar" }, zh: { outOfDate: "您的浏览器已过时", update: { web: "要正常浏览本网站请升级您的浏览器。", googlePlay: "Please install Chrome from Google Play", appStore: "Please update iOS from the Settings App" }, url: "https://browser-update.org/update-browser.html", callToAction: "现在升级", close: "关闭" }, cz: { outOfDate: "V\xe1š prohl\xedžeč je zastaral\xfd!", update: { web: "Pro spr\xe1vn\xe9 zobrazen\xed těchto str\xe1nek aktualizujte svůj prohl\xedžeč. ", googlePlay: "Nainstalujte si Chrome z Google Play", appStore: "Aktualizujte si syst\xe9m iOS" }, url: "https://browser-update.org/update-browser.html", callToAction: "Aktualizovat nyn\xed svůj prohl\xedžeč", close: "Zavř\xedt" }, da: { outOfDate: "Din browser er for\xe6ldet!", update: { web: "Opdat\xe9r din browser for at f\xe5 vist denne hjemmeside korrekt. ", googlePlay: "Install\xe9r venligst Chrome fra Google Play", appStore: "Opdat\xe9r venligst iOS" }, url: "https://browser-update.org/update-browser.html", callToAction: "Opdat\xe9r din browser nu", close: "Luk" }, de: { outOfDate: "Ihr Browser ist veraltet!", update: { web: "Bitte aktualisieren Sie Ihren Browser, um diese Website korrekt darzustellen. ", googlePlay: "Please install Chrome from Google Play", appStore: "Please update iOS from the Settings App" }, url: "https://browser-update.org/update-browser.html", callToAction: "Den Browser jetzt aktualisieren ", close: "Schlie\xdfen" }, ee: { outOfDate: "Sinu veebilehitseja on vananenud!", update: { web: "Palun uuenda oma veebilehitsejat, et n\xe4ha lehek\xfclge korrektselt. ", googlePlay: "Please install Chrome from Google Play", appStore: "Please update iOS from the Settings App" }, url: "https://browser-update.org/update-browser.html", callToAction: "Uuenda oma veebilehitsejat kohe", close: "Sulge" }, en: { outOfDate: "Your browser is out-of-date!", update: { web: "Update your browser to view this website correctly. ", googlePlay: "Please install Chrome from Google Play", appStore: "Please update iOS from the Settings App" }, url: "https://browser-update.org/update-browser.html", callToAction: "Update my browser now", close: "Close" }, es: { outOfDate: "\xa1Tu navegador est\xe1 anticuado!", update: { web: "Actualiza tu navegador para ver esta p\xe1gina correctamente. ", googlePlay: "Please install Chrome from Google Play", appStore: "Please update iOS from the Settings App" }, url: "https://browser-update.org/update-browser.html", callToAction: "Actualizar mi navegador ahora", close: "Cerrar" }, fa: { rightToLeft: !0, outOfDate: "مرورگر شما منسوخ شده است!", update: { web: "جهت مشاهده صحیح این وبسایت، مرورگرتان را بروز رسانی نمایید. ", googlePlay: "Please install Chrome from Google Play", appStore: "Please update iOS from the Settings App" }, url: "https://browser-update.org/update-browser.html", callToAction: "همین حالا مرورگرم را بروز کن", close: "Close" }, fi: { outOfDate: "Selaimesi on vanhentunut!", update: { web: "Lataa ajantasainen selain n&auml;hd&auml;ksesi t&auml;m&auml;n sivun oikein. ", googlePlay: "Asenna uusin Chrome Google Play -kaupasta", appStore: "P\xe4ivit\xe4 iOS puhelimesi asetuksista" }, url: "https://browser-update.org/update-browser.html", callToAction: "P&auml;ivit&auml; selaimeni nyt ", close: "Sulje" }, fr: { outOfDate: "Votre navigateur n'est plus compatible !", update: { web: "Mettez \xe0 jour votre navigateur pour afficher correctement ce site Web. ", googlePlay: "Merci d'installer Chrome depuis le Google Play Store", appStore: "Merci de mettre \xe0 jour iOS depuis l'application R\xe9glages" }, url: "https://browser-update.org/update-browser.html", callToAction: "Mettre \xe0 jour maintenant ", close: "Fermer" }, hu: { outOfDate: "A b\xf6ng\xe9szője elavult!", update: { web: "Firss\xedtse vagy cser\xe9lje le a b\xf6ng\xe9szőj\xe9t. ", googlePlay: "Please install Chrome from Google Play", appStore: "Please update iOS from the Settings App" }, url: "https://browser-update.org/update-browser.html", callToAction: "A b\xf6ng\xe9szőm friss\xedt\xe9se ", close: "Close" }, id: { outOfDate: "Browser yang Anda gunakan sudah ketinggalan zaman!", update: { web: "Perbaharuilah browser Anda agar bisa menjelajahi website ini dengan nyaman. ", googlePlay: "Please install Chrome from Google Play", appStore: "Please update iOS from the Settings App" }, url: "https://browser-update.org/update-browser.html", callToAction: "Perbaharui browser sekarang ", close: "Close" }, it: { outOfDate: "Il tuo browser non &egrave; aggiornato!", update: { web: "Aggiornalo per vedere questo sito correttamente. ", googlePlay: "Please install Chrome from Google Play", appStore: "Please update iOS from the Settings App" }, url: "https://browser-update.org/update-browser.html", callToAction: "Aggiorna ora", close: "Chiudi" }, lt: { outOfDate: "Jūsų naršyklės versija yra pasenusi!", update: { web: "Atnaujinkite savo naršyklę, kad galėtumėte peržiūrėti šią svetainę tinkamai. ", googlePlay: "Please install Chrome from Google Play", appStore: "Please update iOS from the Settings App" }, url: "https://browser-update.org/update-browser.html", callToAction: "Atnaujinti naršyklę ", close: "Close" }, nl: { outOfDate: "Je gebruikt een oude browser!", update: { web: "Update je browser om deze website correct te bekijken. ", googlePlay: "Please install Chrome from Google Play", appStore: "Please update iOS from the Settings App" }, url: "https://browser-update.org/update-browser.html", callToAction: "Update mijn browser nu ", close: "Sluiten" }, pl: { outOfDate: "Twoja przeglądarka jest przestarzała!", update: { web: "Zaktualizuj swoją przeglądarkę, aby poprawnie wyświetlić tę stronę. ", googlePlay: "Proszę zainstalować przeglądarkę Chrome ze sklepu Google Play", appStore: "Proszę zaktualizować iOS z Ustawień" }, url: "https://browser-update.org/update-browser.html", callToAction: "Zaktualizuj przeglądarkę już teraz", close: "Zamknij" }, pt: { outOfDate: "O seu browser est&aacute; desatualizado!", update: { web: "Atualize o seu browser para ter uma melhor experi&ecirc;ncia e visualiza&ccedil;&atilde;o deste site. ", googlePlay: "Please install Chrome from Google Play", appStore: "Please update iOS from the Settings App" }, url: "https://browser-update.org/update-browser.html", callToAction: "Atualize o seu browser agora", close: "Fechar" }, ro: { outOfDate: "Browserul este \xeenvechit!", update: { web: "Actualizați browserul pentru a vizualiza corect acest site. ", googlePlay: "Please install Chrome from Google Play", appStore: "Please update iOS from the Settings App" }, url: "https://browser-update.org/update-browser.html", callToAction: "Actualizați browserul acum!", close: "Close" }, ru: { outOfDate: "Ваш браузер устарел!", update: { web: "Обновите ваш браузер для правильного отображения этого сайта. ", googlePlay: "Please install Chrome from Google Play", appStore: "Please update iOS from the Settings App" }, url: "https://browser-update.org/update-browser.html", callToAction: "Обновить мой браузер ", close: "Закрыть" }, si: { outOfDate: "Vaš brskalnik je zastarel!", update: { web: "Za pravilen prikaz spletne strani posodobite vaš brskalnik. ", googlePlay: "Please install Chrome from Google Play", appStore: "Please update iOS from the Settings App" }, url: "https://browser-update.org/update-browser.html", callToAction: "Posodobi brskalnik ", close: "Zapri" }, sv: { outOfDate: "Din webbl\xe4sare st\xf6djs ej l\xe4ngre!", update: { web: "Uppdatera din webbl\xe4sare f\xf6r att webbplatsen ska visas korrekt. ", googlePlay: "Please install Chrome from Google Play", appStore: "Please update iOS from the Settings App" }, url: "https://browser-update.org/update-browser.html", callToAction: "Uppdatera min webbl\xe4sare nu", close: "St\xe4ng" }, ua: { outOfDate: "Ваш браузер застарів!", update: { web: "Оновіть ваш браузер для правильного відображення цього сайта. ", googlePlay: "Please install Chrome from Google Play", appStore: "Please update iOS from the Settings App" }, url: "https://browser-update.org/update-browser.html", callToAction: "Оновити мій браузер ", close: "Закрити" } } }, {}], 5: [function (o, r, i) {
+                    !
+
+                        /*!
+                         * UAParser.js v0.7.22
+                         * Lightweight JavaScript-based User-Agent string parser
+                         * https://github.com/faisalman/ua-parser-js
+                         *
+                         * Copyright © 2012-2019 Faisal Salman <f@faisalman.com>
+                         * Licensed under MIT License
+                         */
+                        function (o, a) { "use strict"; var s = "function", t = "undefined", l = "object", n = "model", u = "name", d = "type", p = "vendor", w = "version", c = "architecture", g = "console", m = "mobile", b = "tablet", f = "smarttv", h = "wearable", v = { extend: function (e, o) { var r = {}; for (var i in e) o[i] && o[i].length % 2 == 0 ? r[i] = o[i].concat(e[i]) : r[i] = e[i]; return r }, has: function (e, o) { return "string" == typeof e && -1 !== o.toLowerCase().indexOf(e.toLowerCase()) }, lowerize: function (e) { return e.toLowerCase() }, major: function (e) { return "string" == typeof e ? e.replace(/[^\d\.]/g, "").split(".")[0] : a }, trim: function (e) { return e.replace(/^[\s\uFEFF\xA0]+|[\s\uFEFF\xA0]+$/g, "") } }, y = { rgx: function (e, o) { for (var r, i, t, n, u, d, p = 0; p < o.length && !u;) { var w = o[p], c = o[p + 1]; for (r = i = 0; r < w.length && !u;)if (u = w[r++].exec(e)) for (t = 0; t < c.length; t++)d = u[++i], typeof (n = c[t]) === l && n.length > 0 ? 2 == n.length ? typeof n[1] == s ? this[n[0]] = n[1].call(this, d) : this[n[0]] = n[1] : 3 == n.length ? typeof n[1] !== s || n[1].exec && n[1].test ? this[n[0]] = d ? d.replace(n[1], n[2]) : a : this[n[0]] = d ? n[1].call(this, d, n[2]) : a : 4 == n.length && (this[n[0]] = d ? n[3].call(this, d.replace(n[1], n[2])) : a) : this[n] = d || a; p += 2 } }, str: function (e, o) { for (var r in o) if (typeof o[r] === l && o[r].length > 0) { for (var i = 0; i < o[r].length; i++)if (v.has(o[r][i], e)) return "?" === r ? a : r } else if (v.has(o[r], e)) return "?" === r ? a : r; return e } }, S = { browser: { oldsafari: { version: { "1.0": "/8", "1.2": "/1", "1.3": "/3", "2.0": "/412", "2.0.2": "/416", "2.0.3": "/417", "2.0.4": "/419", "?": "/" } } }, device: { amazon: { model: { "Fire Phone": ["SD", "KF"] } }, sprint: { model: { "Evo Shift 4G": "7373KT" }, vendor: { HTC: "APA", Sprint: "Sprint" } } }, os: { windows: { version: { ME: "4.90", "NT 3.11": "NT3.51", "NT 4.0": "NT4.0", 2e3: "NT 5.0", XP: ["NT 5.1", "NT 5.2"], Vista: "NT 6.0", 7: "NT 6.1", 8: "NT 6.2", "8.1": "NT 6.3", 10: ["NT 6.4", "NT 10.0"], RT: "ARM" } } } }, k = { browser: [[/(opera\smini)\/([\w\.-]+)/i, /(opera\s[mobiletab]+).+version\/([\w\.-]+)/i, /(opera).+version\/([\w\.]+)/i, /(opera)[\/\s]+([\w\.]+)/i], [u, w], [/(opios)[\/\s]+([\w\.]+)/i], [[u, "Opera Mini"], w], [/\s(opr)\/([\w\.]+)/i], [[u, "Opera"], w], [/(kindle)\/([\w\.]+)/i, /(lunascape|maxthon|netfront|jasmine|blazer)[\/\s]?([\w\.]*)/i, /(avant\s|iemobile|slim)(?:browser)?[\/\s]?([\w\.]*)/i, /(bidubrowser|baidubrowser)[\/\s]?([\w\.]+)/i, /(?:ms|\()(ie)\s([\w\.]+)/i, /(rekonq)\/([\w\.]*)/i, /(chromium|flock|rockmelt|midori|epiphany|silk|skyfire|ovibrowser|bolt|iron|vivaldi|iridium|phantomjs|bowser|quark|qupzilla|falkon)\/([\w\.-]+)/i], [u, w], [/(konqueror)\/([\w\.]+)/i], [[u, "Konqueror"], w], [/(trident).+rv[:\s]([\w\.]+).+like\sgecko/i], [[u, "IE"], w], [/(edge|edgios|edga|edg)\/((\d+)?[\w\.]+)/i], [[u, "Edge"], w], [/(yabrowser)\/([\w\.]+)/i], [[u, "Yandex"], w], [/(Avast)\/([\w\.]+)/i], [[u, "Avast Secure Browser"], w], [/(AVG)\/([\w\.]+)/i], [[u, "AVG Secure Browser"], w], [/(puffin)\/([\w\.]+)/i], [[u, "Puffin"], w], [/(focus)\/([\w\.]+)/i], [[u, "Firefox Focus"], w], [/(opt)\/([\w\.]+)/i], [[u, "Opera Touch"], w], [/((?:[\s\/])uc?\s?browser|(?:juc.+)ucweb)[\/\s]?([\w\.]+)/i], [[u, "UCBrowser"], w], [/(comodo_dragon)\/([\w\.]+)/i], [[u, /_/g, " "], w], [/(windowswechat qbcore)\/([\w\.]+)/i], [[u, "WeChat(Win) Desktop"], w], [/(micromessenger)\/([\w\.]+)/i], [[u, "WeChat"], w], [/(brave)\/([\w\.]+)/i], [[u, "Brave"], w], [/(qqbrowserlite)\/([\w\.]+)/i], [u, w], [/(QQ)\/([\d\.]+)/i], [u, w], [/m?(qqbrowser)[\/\s]?([\w\.]+)/i], [u, w], [/(baiduboxapp)[\/\s]?([\w\.]+)/i], [u, w], [/(2345Explorer)[\/\s]?([\w\.]+)/i], [u, w], [/(MetaSr)[\/\s]?([\w\.]+)/i], [u], [/(LBBROWSER)/i], [u], [/xiaomi\/miuibrowser\/([\w\.]+)/i], [w, [u, "MIUI Browser"]], [/;fbav\/([\w\.]+);/i], [w, [u, "Facebook"]], [/safari\s(line)\/([\w\.]+)/i, /android.+(line)\/([\w\.]+)\/iab/i], [u, w], [/headlesschrome(?:\/([\w\.]+)|\s)/i], [w, [u, "Chrome Headless"]], [/\swv\).+(chrome)\/([\w\.]+)/i], [[u, /(.+)/, "$1 WebView"], w], [/((?:oculus|samsung)browser)\/([\w\.]+)/i], [[u, /(.+(?:g|us))(.+)/, "$1 $2"], w], [/android.+version\/([\w\.]+)\s+(?:mobile\s?safari|safari)*/i], [w, [u, "Android Browser"]], [/(sailfishbrowser)\/([\w\.]+)/i], [[u, "Sailfish Browser"], w], [/(chrome|omniweb|arora|[tizenoka]{5}\s?browser)\/v?([\w\.]+)/i], [u, w], [/(dolfin)\/([\w\.]+)/i], [[u, "Dolphin"], w], [/(qihu|qhbrowser|qihoobrowser|360browser)/i], [[u, "360 Browser"]], [/((?:android.+)crmo|crios)\/([\w\.]+)/i], [[u, "Chrome"], w], [/(coast)\/([\w\.]+)/i], [[u, "Opera Coast"], w], [/fxios\/([\w\.-]+)/i], [w, [u, "Firefox"]], [/version\/([\w\.]+).+?mobile\/\w+\s(safari)/i], [w, [u, "Mobile Safari"]], [/version\/([\w\.]+).+?(mobile\s?safari|safari)/i], [w, u], [/webkit.+?(gsa)\/([\w\.]+).+?(mobile\s?safari|safari)(\/[\w\.]+)/i], [[u, "GSA"], w], [/webkit.+?(mobile\s?safari|safari)(\/[\w\.]+)/i], [u, [w, y.str, S.browser.oldsafari.version]], [/(webkit|khtml)\/([\w\.]+)/i], [u, w], [/(navigator|netscape)\/([\w\.-]+)/i], [[u, "Netscape"], w], [/(swiftfox)/i, /(icedragon|iceweasel|camino|chimera|fennec|maemo\sbrowser|minimo|conkeror)[\/\s]?([\w\.\+]+)/i, /(firefox|seamonkey|k-meleon|icecat|iceape|firebird|phoenix|palemoon|basilisk|waterfox)\/([\w\.-]+)$/i, /(mozilla)\/([\w\.]+).+rv\:.+gecko\/\d+/i, /(polaris|lynx|dillo|icab|doris|amaya|w3m|netsurf|sleipnir)[\/\s]?([\w\.]+)/i, /(links)\s\(([\w\.]+)/i, /(gobrowser)\/?([\w\.]*)/i, /(ice\s?browser)\/v?([\w\._]+)/i, /(mosaic)[\/\s]([\w\.]+)/i], [u, w]], cpu: [[/(?:(amd|x(?:(?:86|64)[_-])?|wow|win)64)[;\)]/i], [[c, "amd64"]], [/(ia32(?=;))/i], [[c, v.lowerize]], [/((?:i[346]|x)86)[;\)]/i], [[c, "ia32"]], [/windows\s(ce|mobile);\sppc;/i], [[c, "arm"]], [/((?:ppc|powerpc)(?:64)?)(?:\smac|;|\))/i], [[c, /ower/, "", v.lowerize]], [/(sun4\w)[;\)]/i], [[c, "sparc"]], [/((?:avr32|ia64(?=;))|68k(?=\))|arm(?:64|(?=v\d+[;l]))|(?=atmel\s)avr|(?:irix|mips|sparc)(?:64)?(?=;)|pa-risc)/i], [[c, v.lowerize]]], device: [[/\((ipad|playbook);[\w\s\),;-]+(rim|apple)/i], [n, p, [d, b]], [/applecoremedia\/[\w\.]+ \((ipad)/], [n, [p, "Apple"], [d, b]], [/(apple\s{0,1}tv)/i], [[n, "Apple TV"], [p, "Apple"], [d, f]], [/(archos)\s(gamepad2?)/i, /(hp).+(touchpad)/i, /(hp).+(tablet)/i, /(kindle)\/([\w\.]+)/i, /\s(nook)[\w\s]+build\/(\w+)/i, /(dell)\s(strea[kpr\s\d]*[\dko])/i], [p, n, [d, b]], [/(kf[A-z]+)\sbuild\/.+silk\//i], [n, [p, "Amazon"], [d, b]], [/(sd|kf)[0349hijorstuw]+\sbuild\/.+silk\//i], [[n, y.str, S.device.amazon.model], [p, "Amazon"], [d, m]], [/android.+aft([bms])\sbuild/i], [n, [p, "Amazon"], [d, f]], [/\((ip[honed|\s\w*]+);.+(apple)/i], [n, p, [d, m]], [/\((ip[honed|\s\w*]+);/i], [n, [p, "Apple"], [d, m]], [/(blackberry)[\s-]?(\w+)/i, /(blackberry|benq|palm(?=\-)|sonyericsson|acer|asus|dell|meizu|motorola|polytron)[\s_-]?([\w-]*)/i, /(hp)\s([\w\s]+\w)/i, /(asus)-?(\w+)/i], [p, n, [d, m]], [/\(bb10;\s(\w+)/i], [n, [p, "BlackBerry"], [d, m]], [/android.+(transfo[prime\s]{4,10}\s\w+|eeepc|slider\s\w+|nexus 7|padfone|p00c)/i], [n, [p, "Asus"], [d, b]], [/(sony)\s(tablet\s[ps])\sbuild\//i, /(sony)?(?:sgp.+)\sbuild\//i], [[p, "Sony"], [n, "Xperia Tablet"], [d, b]], [/android.+\s([c-g]\d{4}|so[-l]\w+)(?=\sbuild\/|\).+chrome\/(?![1-6]{0,1}\d\.))/i], [n, [p, "Sony"], [d, m]], [/\s(ouya)\s/i, /(nintendo)\s([wids3u]+)/i], [p, n, [d, g]], [/android.+;\s(shield)\sbuild/i], [n, [p, "Nvidia"], [d, g]], [/(playstation\s[34portablevi]+)/i], [n, [p, "Sony"], [d, g]], [/(sprint\s(\w+))/i], [[p, y.str, S.device.sprint.vendor], [n, y.str, S.device.sprint.model], [d, m]], [/(htc)[;_\s-]+([\w\s]+(?=\)|\sbuild)|\w+)/i, /(zte)-(\w*)/i, /(alcatel|geeksphone|nexian|panasonic|(?=;\s)sony)[_\s-]?([\w-]*)/i], [p, [n, /_/g, " "], [d, m]], [/(nexus\s9)/i], [n, [p, "HTC"], [d, b]], [/d\/huawei([\w\s-]+)[;\)]/i, /(nexus\s6p|vog-l29|ane-lx1|eml-l29|ele-l29)/i], [n, [p, "Huawei"], [d, m]], [/android.+(bah2?-a?[lw]\d{2})/i], [n, [p, "Huawei"], [d, b]], [/(microsoft);\s(lumia[\s\w]+)/i], [p, n, [d, m]], [/[\s\(;](xbox(?:\sone)?)[\s\);]/i], [n, [p, "Microsoft"], [d, g]], [/(kin\.[onetw]{3})/i], [[n, /\./g, " "], [p, "Microsoft"], [d, m]], [/\s(milestone|droid(?:[2-4x]|\s(?:bionic|x2|pro|razr))?:?(\s4g)?)[\w\s]+build\//i, /mot[\s-]?(\w*)/i, /(XT\d{3,4}) build\//i, /(nexus\s6)/i], [n, [p, "Motorola"], [d, m]], [/android.+\s(mz60\d|xoom[\s2]{0,2})\sbuild\//i], [n, [p, "Motorola"], [d, b]], [/hbbtv\/\d+\.\d+\.\d+\s+\([\w\s]*;\s*(\w[^;]*);([^;]*)/i], [[p, v.trim], [n, v.trim], [d, f]], [/hbbtv.+maple;(\d+)/i], [[n, /^/, "SmartTV"], [p, "Samsung"], [d, f]], [/\(dtv[\);].+(aquos)/i], [n, [p, "Sharp"], [d, f]], [/android.+((sch-i[89]0\d|shw-m380s|gt-p\d{4}|gt-n\d+|sgh-t8[56]9|nexus 10))/i, /((SM-T\w+))/i], [[p, "Samsung"], n, [d, b]], [/smart-tv.+(samsung)/i], [p, [d, f], n], [/((s[cgp]h-\w+|gt-\w+|galaxy\snexus|sm-\w[\w\d]+))/i, /(sam[sung]*)[\s-]*(\w+-?[\w-]*)/i, /sec-((sgh\w+))/i], [[p, "Samsung"], n, [d, m]], [/sie-(\w*)/i], [n, [p, "Siemens"], [d, m]], [/(maemo|nokia).*(n900|lumia\s\d+)/i, /(nokia)[\s_-]?([\w-]*)/i], [[p, "Nokia"], n, [d, m]], [/android[x\d\.\s;]+\s([ab][1-7]\-?[0178a]\d\d?)/i], [n, [p, "Acer"], [d, b]], [/android.+([vl]k\-?\d{3})\s+build/i], [n, [p, "LG"], [d, b]], [/android\s3\.[\s\w;-]{10}(lg?)-([06cv9]{3,4})/i], [[p, "LG"], n, [d, b]], [/(lg) netcast\.tv/i], [p, n, [d, f]], [/(nexus\s[45])/i, /lg[e;\s\/-]+(\w*)/i, /android.+lg(\-?[\d\w]+)\s+build/i], [n, [p, "LG"], [d, m]], [/(lenovo)\s?(s(?:5000|6000)(?:[\w-]+)|tab(?:[\s\w]+))/i], [p, n, [d, b]], [/android.+(ideatab[a-z0-9\-\s]+)/i], [n, [p, "Lenovo"], [d, b]], [/(lenovo)[_\s-]?([\w-]+)/i], [p, n, [d, m]], [/linux;.+((jolla));/i], [p, n, [d, m]], [/((pebble))app\/[\d\.]+\s/i], [p, n, [d, h]], [/android.+;\s(oppo)\s?([\w\s]+)\sbuild/i], [p, n, [d, m]], [/crkey/i], [[n, "Chromecast"], [p, "Google"], [d, f]], [/android.+;\s(glass)\s\d/i], [n, [p, "Google"], [d, h]], [/android.+;\s(pixel c)[\s)]/i], [n, [p, "Google"], [d, b]], [/android.+;\s(pixel( [23])?( xl)?)[\s)]/i], [n, [p, "Google"], [d, m]], [/android.+;\s(\w+)\s+build\/hm\1/i, /android.+(hm[\s\-_]*note?[\s_]*(?:\d\w)?)\s+build/i, /android.+(mi[\s\-_]*(?:a\d|one|one[\s_]plus|note lte)?[\s_]*(?:\d?\w?)[\s_]*(?:plus)?)\s+build/i, /android.+(redmi[\s\-_]*(?:note)?(?:[\s_]?[\w\s]+))\s+build/i], [[n, /_/g, " "], [p, "Xiaomi"], [d, m]], [/android.+(mi[\s\-_]*(?:pad)(?:[\s_]?[\w\s]+))\s+build/i], [[n, /_/g, " "], [p, "Xiaomi"], [d, b]], [/android.+;\s(m[1-5]\snote)\sbuild/i], [n, [p, "Meizu"], [d, m]], [/(mz)-([\w-]{2,})/i], [[p, "Meizu"], n, [d, m]], [/android.+a000(1)\s+build/i, /android.+oneplus\s(a\d{4})[\s)]/i], [n, [p, "OnePlus"], [d, m]], [/android.+[;\/]\s*(RCT[\d\w]+)\s+build/i], [n, [p, "RCA"], [d, b]], [/android.+[;\/\s]+(Venue[\d\s]{2,7})\s+build/i], [n, [p, "Dell"], [d, b]], [/android.+[;\/]\s*(Q[T|M][\d\w]+)\s+build/i], [n, [p, "Verizon"], [d, b]], [/android.+[;\/]\s+(Barnes[&\s]+Noble\s+|BN[RT])(V?.*)\s+build/i], [[p, "Barnes & Noble"], n, [d, b]], [/android.+[;\/]\s+(TM\d{3}.*\b)\s+build/i], [n, [p, "NuVision"], [d, b]], [/android.+;\s(k88)\sbuild/i], [n, [p, "ZTE"], [d, b]], [/android.+[;\/]\s*(gen\d{3})\s+build.*49h/i], [n, [p, "Swiss"], [d, m]], [/android.+[;\/]\s*(zur\d{3})\s+build/i], [n, [p, "Swiss"], [d, b]], [/android.+[;\/]\s*((Zeki)?TB.*\b)\s+build/i], [n, [p, "Zeki"], [d, b]], [/(android).+[;\/]\s+([YR]\d{2})\s+build/i, /android.+[;\/]\s+(Dragon[\-\s]+Touch\s+|DT)(\w{5})\sbuild/i], [[p, "Dragon Touch"], n, [d, b]], [/android.+[;\/]\s*(NS-?\w{0,9})\sbuild/i], [n, [p, "Insignia"], [d, b]], [/android.+[;\/]\s*((NX|Next)-?\w{0,9})\s+build/i], [n, [p, "NextBook"], [d, b]], [/android.+[;\/]\s*(Xtreme\_)?(V(1[045]|2[015]|30|40|60|7[05]|90))\s+build/i], [[p, "Voice"], n, [d, m]], [/android.+[;\/]\s*(LVTEL\-)?(V1[12])\s+build/i], [[p, "LvTel"], n, [d, m]], [/android.+;\s(PH-1)\s/i], [n, [p, "Essential"], [d, m]], [/android.+[;\/]\s*(V(100MD|700NA|7011|917G).*\b)\s+build/i], [n, [p, "Envizen"], [d, b]], [/android.+[;\/]\s*(Le[\s\-]+Pan)[\s\-]+(\w{1,9})\s+build/i], [p, n, [d, b]], [/android.+[;\/]\s*(Trio[\s\-]*.*)\s+build/i], [n, [p, "MachSpeed"], [d, b]], [/android.+[;\/]\s*(Trinity)[\-\s]*(T\d{3})\s+build/i], [p, n, [d, b]], [/android.+[;\/]\s*TU_(1491)\s+build/i], [n, [p, "Rotor"], [d, b]], [/android.+(KS(.+))\s+build/i], [n, [p, "Amazon"], [d, b]], [/android.+(Gigaset)[\s\-]+(Q\w{1,9})\s+build/i], [p, n, [d, b]], [/\s(tablet|tab)[;\/]/i, /\s(mobile)(?:[;\/]|\ssafari)/i], [[d, v.lowerize], p, n], [/[\s\/\(](smart-?tv)[;\)]/i], [[d, f]], [/(android[\w\.\s\-]{0,9});.+build/i], [n, [p, "Generic"]]], engine: [[/windows.+\sedge\/([\w\.]+)/i], [w, [u, "EdgeHTML"]], [/webkit\/537\.36.+chrome\/(?!27)([\w\.]+)/i], [w, [u, "Blink"]], [/(presto)\/([\w\.]+)/i, /(webkit|trident|netfront|netsurf|amaya|lynx|w3m|goanna)\/([\w\.]+)/i, /(khtml|tasman|links)[\/\s]\(?([\w\.]+)/i, /(icab)[\/\s]([23]\.[\d\.]+)/i], [u, w], [/rv\:([\w\.]{1,9}).+(gecko)/i], [w, u]], os: [[/microsoft\s(windows)\s(vista|xp)/i], [u, w], [/(windows)\snt\s6\.2;\s(arm)/i, /(windows\sphone(?:\sos)*)[\s\/]?([\d\.\s\w]*)/i, /(windows\smobile|windows)[\s\/]?([ntce\d\.\s]+\w)/i], [u, [w, y.str, S.os.windows.version]], [/(win(?=3|9|n)|win\s9x\s)([nt\d\.]+)/i], [[u, "Windows"], [w, y.str, S.os.windows.version]], [/\((bb)(10);/i], [[u, "BlackBerry"], w], [/(blackberry)\w*\/?([\w\.]*)/i, /(tizen|kaios)[\/\s]([\w\.]+)/i, /(android|webos|palm\sos|qnx|bada|rim\stablet\sos|meego|sailfish|contiki)[\/\s-]?([\w\.]*)/i], [u, w], [/(symbian\s?os|symbos|s60(?=;))[\/\s-]?([\w\.]*)/i], [[u, "Symbian"], w], [/\((series40);/i], [u], [/mozilla.+\(mobile;.+gecko.+firefox/i], [[u, "Firefox OS"], w], [/(nintendo|playstation)\s([wids34portablevu]+)/i, /(mint)[\/\s\(]?(\w*)/i, /(mageia|vectorlinux)[;\s]/i, /(joli|[kxln]?ubuntu|debian|suse|opensuse|gentoo|(?=\s)arch|slackware|fedora|mandriva|centos|pclinuxos|redhat|zenwalk|linpus)[\/\s-]?(?!chrom)([\w\.-]*)/i, /(hurd|linux)\s?([\w\.]*)/i, /(gnu)\s?([\w\.]*)/i], [u, w], [/(cros)\s[\w]+\s([\w\.]+\w)/i], [[u, "Chromium OS"], w], [/(sunos)\s?([\w\.\d]*)/i], [[u, "Solaris"], w], [/\s([frentopc-]{0,4}bsd|dragonfly)\s?([\w\.]*)/i], [u, w], [/(haiku)\s(\w+)/i], [u, w], [/cfnetwork\/.+darwin/i, /ip[honead]{2,4}(?:.*os\s([\w]+)\slike\smac|;\sopera)/i], [[w, /_/g, "."], [u, "iOS"]], [/(mac\sos\sx)\s?([\w\s\.]*)/i, /(macintosh|mac(?=_powerpc)\s)/i], [[u, "Mac OS"], [w, /_/g, "."]], [/((?:open)?solaris)[\/\s-]?([\w\.]*)/i, /(aix)\s((\d)(?=\.|\)|\s)[\w\.])*/i, /(plan\s9|minix|beos|os\/2|amigaos|morphos|risc\sos|openvms|fuchsia)/i, /(unix)\s?([\w\.]*)/i], [u, w]] }, A = function (e, r) { if ("object" == typeof e && (r = e, e = a), !(this instanceof A)) return new A(e, r).getResult(); var i = e || (o && o.navigator && o.navigator.userAgent ? o.navigator.userAgent : ""), s = r ? v.extend(k, r) : k; return this.getBrowser = function () { var e = { name: a, version: a }; return y.rgx.call(e, i, s.browser), e.major = v.major(e.version), e }, this.getCPU = function () { var e = { architecture: a }; return y.rgx.call(e, i, s.cpu), e }, this.getDevice = function () { var e = { vendor: a, model: a, type: a }; return y.rgx.call(e, i, s.device), e }, this.getEngine = function () { var e = { name: a, version: a }; return y.rgx.call(e, i, s.engine), e }, this.getOS = function () { var e = { name: a, version: a }; return y.rgx.call(e, i, s.os), e }, this.getResult = function () { return { ua: this.getUA(), browser: this.getBrowser(), engine: this.getEngine(), os: this.getOS(), device: this.getDevice(), cpu: this.getCPU() } }, this.getUA = function () { return i }, this.setUA = function (e) { return i = e, this }, this }; A.VERSION = "0.7.22", A.BROWSER = { NAME: u, MAJOR: "major", VERSION: w }, A.CPU = { ARCHITECTURE: c }, A.DEVICE = { MODEL: n, VENDOR: p, TYPE: d, CONSOLE: g, MOBILE: m, SMARTTV: f, TABLET: b, WEARABLE: h, EMBEDDED: "embedded" }, A.ENGINE = { NAME: u, VERSION: w }, A.OS = { NAME: u, VERSION: w }, typeof i !== t ? (typeof r !== t && r.exports && (i = r.exports = A), i.UAParser = A) : "function" == typeof e && e.amd ? e(function () { return A }) : o && (o.UAParser = A); var P = o && (o.jQuery || o.Zepto); if (P && !P.ua) { var $ = new A; P.ua = $.getResult(), P.ua.get = function () { return $.getUA() }, P.ua.set = function (e) { $.setUA(e); var o = $.getResult(); for (var r in o) P.ua[r] = o[r] } } }("object" == typeof window ? window : this)
+                }, {}]
+            }, {}, [3])(3)
+        });</script>
+    <script>
+        outdatedBrowserRework();
+    </script>
+    <style>
+        #outdated {
+            font-family: "Open Sans", "Segoe UI", sans-serif;
+            position: absolute;
+            background-color: #f25648;
+            color: white;
+            display: none;
+            overflow: hidden;
+            left: 0;
+            position: fixed;
+            text-align: center;
+            text-transform: uppercase;
+            top: 0;
+            width: 100%;
+            z-index: 1500;
+            padding: 0 24px 24px 0;
+        }
+
+        #outdated.fullscreen {
+            height: 100%;
+        }
+
+        #outdated .vertical-center {
+            display: table-cell;
+            text-align: center;
+            vertical-align: middle;
+        }
+
+        #outdated h6 {
+            font-size: 25px;
+            line-height: 25px;
+            margin: 12px 0;
+        }
+
+        #outdated p {
+            font-size: 12px;
+            line-height: 12px;
+            margin: 0;
+        }
+
+        #outdated #buttonUpdateBrowser {
+            border: 2px solid white;
+            color: white;
+            cursor: pointer;
+            display: block;
+            margin: 30px auto 0;
+            padding: 10px 20px;
+            position: relative;
+            text-decoration: none;
+            width: 230px;
+        }
+
+        #outdated #buttonUpdateBrowser:hover {
+            background-color: white;
+            color: #f25648;
+        }
+
+        #outdated .last {
+            height: 20px;
+            position: absolute;
+            right: 70px;
+            top: 10px;
+            width: auto;
+            display: inline-table;
+        }
+
+        #outdated .last[dir=rtl] {
+            left: 25px !important;
+            right: auto !important;
+        }
+
+        #outdated #buttonCloseUpdateBrowser {
+            color: white;
+            display: block;
+            font-size: 36px;
+            height: 100%;
+            line-height: 36px;
+            position: relative;
+            text-decoration: none;
+            width: 100%;
+        }
+    </style>
+    <style>
+        @import url('https://fonts.cdnfonts.com/css/poppins');
+        @import url('https://cdn.jsdelivr.net/gh/FortAwesome/Font-Awesome@6.x/css/all.min.css');
+        @import url('/assets/css/games.css');
+        @import url('/assets/css/navbar.css');
+
+        * {
+            font-family: 'Poppins', sans-serif;
+            user-select: none;
+        }
+
+        html {
+            min-height: 100vh;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background-color: #1d1d1d;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+            color: #fff;
+            min-height: 100%;
+        }
+
+        #spacer {
+            min-height: 85vh;
+        }
+
+        .noscroll {
+            overflow: hidden;
+        }
+
+        .content {
+            text-align: center;
+        }
+
+        .hidden {
+            display: none;
+        }
+
+        h1 {
+            font-size: 95px;
+            color: #fff;
+            text-align: center;
+        }
+
+        .centered {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            -ms-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+        }
+
+        h1.title {
+            font-size: 95px;
+            color: #fff;
+            margin-bottom: 50px;
+        }
+
+        button {
+            background: transparent;
+            font-size: 23px;
+            color: #fff;
+            text-decoration: none;
+            border: 2px solid #fff;
+            padding: 15px 25px;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: background-color 0.3s ease-in-out;
+        }
+
+        button:hover {
+            background-color: #383636;
+            border-color: #fff;
+            color: #fff;
+        }
+
+        .background-clip {
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            z-index: -1;
+        }
+
+        li {
+            text-align: left;
+        }
+
+        a {
+            color: #fff;
+            text-decoration: none;
+        }
+
+        input {
+            font-size: 23px;
+            color: #fff;
+            border: 2px solid #fff;
+            padding: 15px 25px;
+            border-radius: 10px;
+            text-align: center;
+            background: transparent;
+            outline: none;
+        }
+
+        input:focus {
+            background-color: #383636;
+            border-color: #fff;
+            color: #fff;
+        }
+
+        .apps {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .app {
+            min-width: 200px;
+            min-height: 200px;
+            border-radius: 15px;
+            border: 3px solid #ffffff;
+            cursor: pointer;
+            transition: .4s;
+            position: relative;
+            box-shadow: 0px 0px 10px #00000020;
+            margin: 10px;
+            overflow: hidden;
+        }
+
+        .app:hover {
+            box-shadow: 0px 0px 50px #000000;
+            filter: brightness(95%);
+            transform: translateY(-5px);
+            border: 3px solid #383636;
+        }
+
+        .app>img {
+            object-fit: cover;
+            position: absolute;
+            left: 0;
+            top: 0;
+            object-position: center;
+            width: 200px;
+            height: 200px;
+        }
+
+        .app:after {
+            content: '';
+            top: 0;
+            left: 0;
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.6) 100%);
+        }
+
+        .app>span {
+            position: absolute;
+            bottom: 20px;
+            left: 20px;
+            color: #fff;
+            z-index: 10;
+            font-size: 15px;
+        }
+
+        footer {
+            margin: 50px;
+        }
+
+        footer>a {
+            margin-left: 50px;
+        }
+
+        .frame {
+            width: 100%;
+            position: absolute;
+            top: 0;
+            background: #1d1d1d;
+            z-index: 9999999999;
+            height: 100vh;
+        }
+
+        .frame>iframe {
+            width: 100%;
+            height: calc(100% - 50px);
+            position: absolute;
+            bottom: 0;
+            left: 0;
+        }
+
+        .frame>.nav {
+            display: flex;
+            position: absolute;
+            top: 0;
+            background: #383636;
+            width: 100%;
+            height: 50px;
+        }
+
+        .frame>.nav>.right {
+            display: flex;
+            position: absolute;
+            right: 0;
+            height: 100%;
+        }
+
+        .frame>.nav .item {
+            padding: 10px;
+            cursor: pointer;
+        }
+
+        .frame>.nav .item i {
+            font-size: 30px;
+        }
+
+        .noresults {
+            text-align: center;
+            min-height: 45vh;
+        }
+    </style>
+
+    <style>
+        h1,
+        h2,
+        h3,
+        p {
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="navbar">
+        <a href="/">Home</a>
+        <a href="/games">Games</a>
+        <a href="/apps">Apps</a>
+        <a href="/search">Search</a>
+        <a href="/settings">Settings</a>
+    </div>
+    <div class="content">
+        <h1 style="text-align: center;">Bookmarklets</h1>
+        <br />
+        <p>Drag the button for the bookmarklet into your bookmarks bar.</p>
+        <p>(Keep in mind: You cannot use bookmarklets on a new tab or any system pages)</p>
+        <br />
+        <h2>Useful Bookmarklets</h2>
+
+        <div>
+            <div class="bookmarklet">
+                <h3>Eruda (Inspect Element)</h3>
+                <p>Inspect Element, click the button at the bottom right to activate it. <a
+                        href="https://github.com/liriliri/eruda">It is open-source!</a></p>
+                <a class="button"
+                    href="javascript:(function () { var script = document.createElement('script'); script.src='//cdn.jsdelivr.net/npm/eruda'; document.body.appendChild(script); script.onload = function () { eruda.init() } })();">
+                    Activate Eruda
+                </a>
+            </div>
+
+            <div class="bookmarklet">
+                <h3>Firebug (Inspect Element #2)</h3>
+                <p>Inspect Element (view and edit the html css and js of the page you are on)</p>
+                <a class="button"
+                    href="javascript:var firebug=document.createElement('script');firebug.setAttribute('src','https://luphoria.com/fbl/fbl/firebug-lite-debug.js');document.body.appendChild(firebug);(function(){if(window.firebug.version){firebug.init();}else{setTimeout(arguments.callee);}})();void(firebug);">
+                    Activate Firebug
+                </a>
+            </div>
+
+            <div class="bookmarklet">
+                <h3>X-Ray Goggles (Inspect Element #3)</h3>
+                <p>This bookmarklet lets you edit any elements on the page with an inspect tool. (Press esc to exit it)
+                </p>
+                <a class="button"
+                    href="javascript:(function () {var script=document.createElement('script');script.src='https://x-ray-goggles.mouse.org/webxray.js';script.className='webxray';script.setAttribute('data-lang','en-US');script.setAttribute('data-baseuri','https://x-ray-goggles.mouse.org');document.body.appendChild(script);}())">
+                    Activate X-ray Googles
+                </a>
+            </div>
+
+            <div class="bookmarklet">
+                <h3>Edit+ (Inspect Element #4)</h3>
+                <p>Allows you to edit text on the page just by clicking there, and if you click the bookmarklet again it
+                    will disable it. Thank you BluePotato#8397 for finding this!</p>
+                <a class="button"
+                    href="javascript:if(document.body.contentEditable != 'true')void(document.body.contentEditable = 'true');else void(document.body.contentEditable = 'false');\">Edit
+                    On/Off</a>
+            </div>
+
+            <div class="bookmarklet">
+                <h3>Portable about:blank embedder</h3>
+                <p>about:blank embedder in a bookmarklet</p>
+                <a class="button"
+                    href="javascript: (function () {var url = prompt('Paste the link you want to be embedded into an about:blank page.\n(INCLUDE https://)', 'https://example.com'); var urlObj = new window.URL(window.location.href); win = window.open(); win.document.body.style.margin = '0'; win.document.body.style.height = '100vh'; var iframe = win.document.createElement('iframe'); iframe.style.border = 'none'; iframe.style.width = '100%'; iframe.style.height = '100%'; iframe.style.margin = '0'; iframe.referrerpolicy = 'no-referrer'; iframe.allow = 'fullscreen'; iframe.src = url.toString(); win.document.body.appendChild(iframe); var script = win.document.createElement('script'); script.src = 'https://3kh0.github.io/js/main.js'; win.document.body.appendChild(script); })();">
+                    about:blank
+                </a>
+            </div>
+
+            <div class="bookmarklet">
+                <h3>Google Translate Proxy</h3>
+                <p>view your website in a google translate preview</p>
+                <a class="button"
+                    href="javascript:var a='https://translate.google.com/translate?u='';var b=encodeURI(location.href);var c='?tl=en';open(a+b+c);">Google
+                    Translate Bypasser</a>
+            </div>
+
+            <div class="bookmarklet">
+                <h3>View Page Source</h3>
+                <p>View page source with Snoopy</p>
+                <a class="button"
+                    href="javascript:(function()%7Bvar d%3Ddocument%2Cs%2Ce%3Bvar el%3Dd.getElementById('snpy')%3Bif(typeof Snoopy!%3D'undefined')%7BSnoopy.toggle()%3Breturn%7Delse%7Bif(el)%7Bel.className%3D%2Fclosed%2F.test(el.className)%3Fel.className.replace('closed'%2C')%3Ael.className%2B' closed'%3Breturn%7D%7Ds%3Dd.createElement('link')%3Bs.setAttribute('href'%2C'http%3A%2F%2Fsnoopy-assets.allmarkedup.com%2Fsnoopy-min.css')%3Bs.setAttribute('rel'%2C'stylesheet')%3Bs.setAttribute('type'%2C'text%2Fcss')%3Bd.getElementsByTagName('head')%5B0%5D.appendChild(s)%3Be%3Dd.createElement('script')%3Be.setAttribute('src'%2C'http%3A%2F%2Fsnoopy-assets.allmarkedup.com%2Fsnoopy-min.js')%3Bd.getElementsByTagName('body')%5B0%5D.appendChild(e)%7D)()%3B">
+                    View page source
+                </a>
+            </div>
+
+            <div class="bookmarklet">
+                <h3>Adblocker</h3>
+                <p>Adblocker (Note: You will have to click it every time you go to a website)</p>
+                <a class="button"
+                    href="javascript:var st = confirm('strict adblocker?'); if(st){var invisible = document.createElement('style'); invisible.innerHTML = 'iframe{display:none} embed{display:none} object{display:none} frame{display:none}'; document.body.appendChild(invisible); setInterval(function(){var embeds = document.querySelectorAll('iframe, embed, frame, object'); for(i = 0; i < embeds.length; i++){embeds[i].remove()}}, 500)} else{var adblock = document.createElement('style'); adblock.innerHTML = '[src*=adserver] {display: none; } [src*=adlinks] {display: none;} [src*=adtech] {display:none;} [id*=google_ads] { display: none; } [src*=doubleclick.net] { display:none;} [src*=googlead] { display: none; } [href*=googlead] { display:none;} [src*=googlesyndication] { display: none;} [src*=ads.] { display: none; } [src*=.ad] {display: none; } [src*=ad.] {display:none;} [src*=adsmart] { display:none;}'; document.body.appendChild(adblock)} if(st){var elements = document.body.querySelectorAll('*'); for(i2 = 0; i2 < elements.length; i2++){if(elements[i2].id.includes('google_ads_iframe')){elements[i2].remove()}}} var x = document.getElementsByClassName('video-stream html5-main-video')[0]; function videoblock() { if(x.src.includes('pltype=adhost')) { x.currentTime = 999999999; }} setInterval(videoblock, 10)">
+                    AdBlocker
+                </a>
+            </div>
+
+            <div class="bookmarklet">
+                <h3>Youtube Adblocker #2</h3>
+                <p>Adblocker (Note: You will have to click it for every ad)</p>
+                <a class="button"
+                    href="javascript:(function()%7Bdocument.querySelector('video').currentTime %3D document.querySelector('video').duration%7D)()%3B">Youtube
+                    AdBlocker</a>
+            </div>
+
+            <h2>Random Bookmarklets</h2>
+
+            <div>
+                <div class="bookmarklet">
+                    <h3>Make page 3D</h3>
+                    <p>This does what the title says! Everything will be 3D!</p>
+                    <a class="button"
+                        href="javascript:(function(){var js=document.body.appendChild(document.createElement('script'));js.onerror=function(){alert('Sorry, the script could not be loaded.'')};js.src='https://rawgit.com/Krazete/bookmarklets/master/tri.js'})();">
+                        Make Page 3D
+                    </a>
+                </div>
+
+                <div class="bookmarklet">
+                    <h3>Kick Ass</h3>
+                    <p>A fun game you can play and destroy things on the website you're on.</p>
+                    <a class="button"
+                        href="javascript:var%20KICKASSVERSION='2.0';var%20s%20=%20document.createElement('script');s.type='text/javascript';document.body.appendChild(s);s.src='//hi.kickassapp.com/kickass.js';void(0);">Kick
+                        Ass</a>
+                </div>
+
+                <div class="bookmarklet"></div>
+                <h3>Snake Game</h3>
+                <p>Play snake in the corner of your page! Press P to play/pause</p>
+                <a class="button"
+                    href="javascript:Q=32;m=b=Q*Q;a=[P=l=u=d=p=S=w=0];u=8;f=(h=j=t=(b+Q)/2)-1;(B=(D=document).body).appendChild(x=D.createElement('p'));(X=x.style).position='fixed';X.left=X.top=0;X.background='#FFF%22;x.innerHTML=%22%3Cp%3E%3C/p%3E%3Ccanvas%3E%22;v=(s=x.childNodes)[0];(s=s[1]).width=s.height=5*Q;c=s.getContext(%222d%22);%20onkeydown=onblur=F=function(e,g){g?a[f]?(w+=m,f=Math.random(l+=8)*(R=Q-2)*R|(u=0),F(f+=Q+1+2*(f/R|0),g)):F(f):0%3Ee?(l?--l:(y=t,t=a[t]-2,F(y)),S+=(w*=0.8)/4,m=999/(u++%20+10),a[h+=[-1,-Q,1,Q][d=p]]?B.removeChild(x,alert(%22Game%20Over!\nThe%20game%20window%20will%20now%20be%20closed.\n\nMade%20by%203kh0%22)):(F(h),F(e,j=h),v.innerHTML=P?(setTimeout(F,50,e,0),S|0):%22Press%20P%20to%20play!%20Made%20by%203kh0%22)):-e?(y=(a[e]=e%3CQ|e%3E=Q*Q-Q|!(e%Q)|e%Q==Q-1|2*(e==h))+(e==f),e==h&&(a[j]=2+h),c.fillStyle=%22hsl(%22+99*!a[e]+%22,%22+2*m+%22%,%22+50*y+%22%)%22,c.fillRect(e%Q*5,5*(e/Q|0),5,5)):isNaN(y=e.keyCode-37)|43==y?(P=y&&!P)&&F(-1):%20p=!P|y&-4|!(y^2^d)?p:y;return!1};for(;--b;F(b));void%20F(-1);">
+                    Play Snake
+                </a>
+            </div>
+
+            <div class="bookmarklet"></div>
+            <h3>Return Youtube Dislikes</h3>
+            <p>Shows you the dislikes on a Youtube video in a new tab.</p>
+            <a class="button"
+                href="javascript:var a='https://returnyoutubedislikeapi.com/votes?videoId=';var b=location.search.split('v=')[1].split('&')[0];if(location.hostname==='www.youtube.com'){open(a+b);}else if(location.hostname==='youtu.be'){open(a+b);}else if(location.hostname==='www.youtube-nocookie.com'){open(a+b);}">
+                Get Dislikes
+            </a>
+        </div>
+
+        <div class="bookmarklet">
+            <h3>YoHoHo.io Hack</h3>
+            <p>This gives you the max player and max pets in yohoho.io</p>
+            <a class="button"
+                href="javascript:(function()%7Bvar%20_0x174722%3D_0x5349%3Bfunction%20_0x5349(_0x189185%2C_0x5292a0)%7Bvar%20_0xf69f83%3D_0x1101()%3Breturn%20_0x5349%3Dfunction(_0x22b1ac%2C_0xdee93c)%7B_0x22b1ac%3D_0x22b1ac-0x1d9%3Bvar%20_0x1c59b4%3D_0xf69f83%5B_0x22b1ac%5D%3Breturn%20_0x1c59b4%3B%7D%2C_0x5349(_0x189185%2C_0x5292a0)%3B%7D(function(_0x162947%2C_0x5a35c1)%7Bvar%20_0x1d7e79%3D_0x5349%2C_0x3f41fd%3D_0x162947()%3Bwhile(!!%5B%5D)%7Btry%7Bvar%20_0x5ee40d%3DparseInt(_0x1d7e79(0x1e2))%2F0x1*(-parseInt(_0x1d7e79(0x1fb))%2F0x2)%2B-parseInt(_0x1d7e79(0x1eb))%2F0x3*(-parseInt(_0x1d7e79(0x1f7))%2F0x4)%2B-parseInt(_0x1d7e79(0x20f))%2F0x5%2B-parseInt(_0x1d7e79(0x1f8))%2F0x6%2B-parseInt(_0x1d7e79(0x20b))%2F0x7%2BparseInt(_0x1d7e79(0x204))%2F0x8*(parseInt(_0x1d7e79(0x1e9))%2F0x9)%2BparseInt(_0x1d7e79(0x1f4))%2F0xa*(parseInt(_0x1d7e79(0x1d9))%2F0xb)%3Bif(_0x5ee40d%3D%3D%3D_0x5a35c1)break%3Belse%20_0x3f41fd%5B'push'%5D(_0x3f41fd%5B'shift'%5D())%3B%7Dcatch(_0x338e30)%7B_0x3f41fd%5B'push'%5D(_0x3f41fd%5B'shift'%5D())%3B%7D%7D%7D(_0x1101%2C0x83dbe))%3Bvar%20_0xf03dc6%3D(function()%7Bvar%20_0x1817ae%3D!!%5B%5D%3Breturn%20function(_0x24b9a6%2C_0x56e202)%7Bvar%20_0x2e6656%3D_0x1817ae%3Ffunction()%7Bvar%20_0x1cfd89%3D_0x5349%3Bif(_0x56e202)%7Bvar%20_0x56b063%3D_0x56e202%5B_0x1cfd89(0x1ea)%5D(_0x24b9a6%2Carguments)%3Breturn%20_0x56e202%3Dnull%2C_0x56b063%3B%7D%7D%3Afunction()%7B%7D%3Breturn%20_0x1817ae%3D!%5B%5D%2C_0x2e6656%3B%7D%3B%7D())%2C_0x4be9bc%3D_0xf03dc6(this%2Cfunction()%7Bvar%20_0x7f72c4%3D_0x5349%3Breturn%20_0x4be9bc%5B'toString'%5D()%5B_0x7f72c4(0x1e3)%5D('(((.%2B)%2B)%2B)%2B%24')%5B'toString'%5D()%5B_0x7f72c4(0x211)%5D(_0x4be9bc)%5B_0x7f72c4(0x1e3)%5D(_0x7f72c4(0x1da))%3B%7D)%3B_0x4be9bc()%3Bvar%20_0x5a2fb3%3D(function()%7Bvar%20_0x4fa72b%3D!!%5B%5D%3Breturn%20function(_0x1d7e05%2C_0x5562c5)%7Bvar%20_0x37721b%3D_0x4fa72b%3Ffunction()%7Bvar%20_0x16d0ee%3D_0x5349%3Bif(_0x16d0ee(0x215)%3D%3D%3D'iRQFn')%7Bvar%20_0x4e6b3a%3D_0x38d8d7%3Ffunction()%7Bvar%20_0x3b2120%3D_0x16d0ee%3Bif(_0x1570d0)%7Bvar%20_0x4107aa%3D_0x4999cd%5B_0x3b2120(0x1ea)%5D(_0x14c1a1%2Carguments)%3Breturn%20_0x446509%3Dnull%2C_0x4107aa%3B%7D%7D%3Afunction()%7B%7D%3Breturn%20_0x29a8b1%3D!%5B%5D%2C_0x4e6b3a%3B%7Delse%7Bif(_0x5562c5)%7Bvar%20_0x581c83%3D_0x5562c5%5B_0x16d0ee(0x1ea)%5D(_0x1d7e05%2Carguments)%3Breturn%20_0x5562c5%3Dnull%2C_0x581c83%3B%7D%7D%7D%3Afunction()%7B%7D%3Breturn%20_0x4fa72b%3D!%5B%5D%2C_0x37721b%3B%7D%3B%7D())%3B(function()%7Bvar%20_0x180252%3D_0x5349%2C_0x57a488%3Btry%7Bvar%20_0x38868a%3DFunction(_0x180252(0x1f2)%2B_0x180252(0x209)%2B')%3B')%3B_0x57a488%3D_0x38868a()%3B%7Dcatch(_0x768270)%7B_0x57a488%3Dwindow%3B%7D_0x57a488%5B_0x180252(0x20c)%5D(_0x4bf308%2C0x1)%3B%7D())%2C(function()%7B_0x5a2fb3(this%2Cfunction()%7Bvar%20_0x122756%3D_0x5349%3Bif('WFald'!%3D%3D'WFald')%7Bvar%20_0x2be14a%3D_0x1286ba%5B_0x122756(0x1ea)%5D(_0x21c742%2Carguments)%3Breturn%20_0xc10b3a%3Dnull%2C_0x2be14a%3B%7Delse%7Bvar%20_0x376390%3Dnew%20RegExp(_0x122756(0x201))%2C_0x3acb61%3Dnew%20RegExp('%5Cx5c%2B%5Cx5c%2B%5Cx20*(%3F%3A%5Ba-zA-Z_%24%5D%5B0-9a-zA-Z_%24%5D*)'%2C'i')%2C_0x1a360c%3D_0x4bf308(_0x122756(0x1fd))%3B!_0x376390%5B_0x122756(0x1e5)%5D(_0x1a360c%2B_0x122756(0x203))%7C%7C!_0x3acb61%5B'test'%5D(_0x1a360c%2B_0x122756(0x1e4))%3F'ebNHv'!%3D%3D_0x122756(0x216)%3F_0x1a360c('0')%3A_0x450f89()%3A_0x4bf308()%3B%7D%7D)()%3B%7D())%3Bfunction%20_0x1101()%7Bvar%20_0x550c10%3D%5B'183285lNowSP'%2C'apply'%2C'6KFoCWW'%2C'%5B1%2C2%2C3%2C4%2C5%2C6%2C7%2C8%2C9%5D'%2C'bind'%2C'fpBzY'%2C'toString'%2C'dhBsH'%2C'SWNEZ'%2C'return%5Cx20(function()%5Cx20'%2C'call'%2C'98310cvxqkT'%2C'exception'%2C'playerPetLevel'%2C'1456292zrKVuj'%2C'5620128LIVAYr'%2C'action'%2C'setItem'%2C'1078BKXzXO'%2C'ZxGQZ'%2C'init'%2C'If%5Cx20this%5Cx20page%5Cx20is%5Cx20not%5Cx20a%5Cx20yohoho.io%5Cx20game%2C%5Cx20please%5Cx20click%5Cx20on%5Cx20cancel.%5Cx20%5Cx0a%5Cx0aIf%5Cx20it%5Cx20is%2C%5Cx20please%5Cx20click%5Cx20OK%5Cx20to%5Cx20continue!'%2C'prototype'%2C'obaOi'%2C'function%5Cx20*%5Cx5c(%5Cx20*%5Cx5c)'%2C'gger'%2C'chain'%2C'384qRIqmn'%2C'XqhBk'%2C'console'%2C'licVk'%2C'eTADI'%2C'%7B%7D.constructor(%5Cx22return%5Cx20this%5Cx22)(%5Cx20)'%2C'while%5Cx20(true)%5Cx20%7B%7D'%2C'6362986aCtcCS'%2C'setInterval'%2C'trace'%2C'unlockedPets'%2C'2811780zubtez'%2C'string'%2C'constructor'%2C'stateObject'%2C'warn'%2C'info'%2C'aTcYY'%2C'eXhCw'%2C'unlockedSkins'%2C'1661OuHzpg'%2C'(((.%2B)%2B)%2B)%2B%24'%2C'Finished!%5Cx20The%5Cx20page%5Cx20will%5Cx20now%5Cx20reload%5Cx20for%5Cx20the%5Cx20changes%5Cx20to%5Cx20take%5Cx20effect!'%2C'__proto__'%2C'log'%2C'counter'%2C'debu'%2C'error'%2C'length'%2C'449RmqYJz'%2C'search'%2C'input'%2C'test'%2C'table'%2C'The%5Cx20script%5Cx20has%5Cx20been%5Cx20cancelled!%5Cx20Have%5Cx20a%5Cx20nice%5Cx20day!'%2C'BqZSR'%5D%3B_0x1101%3Dfunction()%7Breturn%20_0x550c10%3B%7D%3Breturn%20_0x1101()%3B%7Dvar%20_0xdee93c%3D(function()%7Bvar%20_0x2269c3%3D!!%5B%5D%3Breturn%20function(_0x2b326a%2C_0x5c611b)%7Bvar%20_0xa408cb%3D_0x2269c3%3Ffunction()%7Bvar%20_0x1d1515%3D_0x5349%3Bif(_0x5c611b)%7Bvar%20_0x5388d4%3D_0x5c611b%5B_0x1d1515(0x1ea)%5D(_0x2b326a%2Carguments)%3Breturn%20_0x5c611b%3Dnull%2C_0x5388d4%3B%7D%7D%3Afunction()%7B%7D%3Breturn%20_0x2269c3%3D!%5B%5D%2C_0xa408cb%3B%7D%3B%7D())%2C_0x22b1ac%3D_0xdee93c(this%2Cfunction()%7Bvar%20_0x2adb39%3D_0x5349%2C_0x1b1d71%3Btry%7Bif(_0x2adb39(0x207)%3D%3D%3D_0x2adb39(0x1e8))_0xdd2f0c(0x0)%3Belse%7Bvar%20_0x28de03%3DFunction(_0x2adb39(0x1f2)%2B_0x2adb39(0x209)%2B')%3B')%3B_0x1b1d71%3D_0x28de03()%3B%7D%7Dcatch(_0x4fd599)%7Bif(_0x2adb39(0x208)!%3D%3D_0x2adb39(0x1ee))_0x1b1d71%3Dwindow%3Belse%7Bif(_0x5c6a24)%7Bvar%20_0x4fc9ea%3D_0x2222ae%5B_0x2adb39(0x1ea)%5D(_0x2ac408%2Carguments)%3Breturn%20_0x5a3cb1%3Dnull%2C_0x4fc9ea%3B%7D%7D%7Dvar%20_0x1e2465%3D_0x1b1d71%5B_0x2adb39(0x206)%5D%3D_0x1b1d71%5B_0x2adb39(0x206)%5D%7C%7C%7B%7D%2C_0xeacc30%3D%5B_0x2adb39(0x1dd)%2C_0x2adb39(0x213)%2C_0x2adb39(0x214)%2C_0x2adb39(0x1e0)%2C'exception'%2C'table'%2C'trace'%5D%3Bfor(var%20_0x1d8669%3D0x0%3B_0x1d8669%3C_0xeacc30%5B_0x2adb39(0x1e1)%5D%3B_0x1d8669%2B%2B)%7Bif(_0x2adb39(0x1fc)%3D%3D%3D_0x2adb39(0x1fc))%7Bvar%20_0x115b45%3D_0xdee93c%5B_0x2adb39(0x211)%5D%5B_0x2adb39(0x1ff)%5D%5B'bind'%5D(_0xdee93c)%2C_0x2b0b70%3D_0xeacc30%5B_0x1d8669%5D%2C_0xf6fef4%3D_0x1e2465%5B_0x2b0b70%5D%7C%7C_0x115b45%3B_0x115b45%5B_0x2adb39(0x1dc)%5D%3D_0xdee93c%5B_0x2adb39(0x1ed)%5D(_0xdee93c)%2C_0x115b45%5B'toString'%5D%3D_0xf6fef4%5B'toString'%5D%5B_0x2adb39(0x1ed)%5D(_0xf6fef4)%2C_0x1e2465%5B_0x2b0b70%5D%3D_0x115b45%3B%7Delse%7Bvar%20_0x214333%3Btry%7Bvar%20_0x283e77%3D_0x2ae7a0(_0x2adb39(0x1f2)%2B_0x2adb39(0x209)%2B')%3B')%3B_0x214333%3D_0x283e77()%3B%7Dcatch(_0x485cee)%7B_0x214333%3D_0x581ec1%3B%7Dvar%20_0x431763%3D_0x214333%5B'console'%5D%3D_0x214333%5B_0x2adb39(0x206)%5D%7C%7C%7B%7D%2C_0x1dca6c%3D%5B_0x2adb39(0x1dd)%2C_0x2adb39(0x213)%2C'info'%2C_0x2adb39(0x1e0)%2C_0x2adb39(0x1f5)%2C_0x2adb39(0x1e6)%2C_0x2adb39(0x20d)%5D%3Bfor(var%20_0x5a67d6%3D0x0%3B_0x5a67d6%3C_0x1dca6c%5B_0x2adb39(0x1e1)%5D%3B_0x5a67d6%2B%2B)%7Bvar%20_0x603c42%3D_0x2ebf4a%5B'constructor'%5D%5B_0x2adb39(0x1ff)%5D%5B_0x2adb39(0x1ed)%5D(_0xedf4d0)%2C_0x37712c%3D_0x1dca6c%5B_0x5a67d6%5D%2C_0x43599c%3D_0x431763%5B_0x37712c%5D%7C%7C_0x603c42%3B_0x603c42%5B'__proto__'%5D%3D_0x429b17%5B'bind'%5D(_0x20cc5a)%2C_0x603c42%5B_0x2adb39(0x1ef)%5D%3D_0x43599c%5B_0x2adb39(0x1ef)%5D%5B'bind'%5D(_0x43599c)%2C_0x431763%5B_0x37712c%5D%3D_0x603c42%3B%7D%7D%7D%7D)%3B_0x22b1ac()%3Bconfirm(_0x174722(0x1fe))%3D%3D!!%5B%5D%3F(localStorage%5B'setItem'%5D(_0x174722(0x217)%2C'%5B1%2C2%2C3%2C4%2C5%2C6%2C7%2C8%2C9%2C10%2C11%2C12%2C13%2C14%2C15%2C16%2C17%2C18%2C19%2C20%2C21%2C22%2C23%2C24%2C25%2C26%2C27%2C28%2C29%2C30%2C31%2C32%2C33%2C34%2C35%5D')%2ClocalStorage%5B_0x174722(0x1fa)%5D('playerSkin'%2C'35')%2ClocalStorage%5B_0x174722(0x1fa)%5D(_0x174722(0x20e)%2C_0x174722(0x1ec))%2ClocalStorage%5B'setItem'%5D('playerPet'%2C'9')%2ClocalStorage%5B_0x174722(0x1fa)%5D(_0x174722(0x1f6)%2C'14')%2Calert(_0x174722(0x1db))%2Clocation%5B'reload'%5D())%3Aalert(_0x174722(0x1e7))%3Bfunction%20_0x4bf308(_0x34a9ca)%7Bvar%20_0x486d99%3D_0x174722%3Bfunction%20_0x359a6f(_0x5be8f3)%7Bvar%20_0x3eedd3%3D_0x5349%3Bif(typeof%20_0x5be8f3%3D%3D%3D_0x3eedd3(0x210))return%20function(_0x4673d8)%7B%7D%5B'constructor'%5D(_0x3eedd3(0x20a))%5B_0x3eedd3(0x1ea)%5D(_0x3eedd3(0x1de))%3Belse%7Bif((''%2B_0x5be8f3%2F_0x5be8f3)%5B_0x3eedd3(0x1e1)%5D!%3D%3D0x1%7C%7C_0x5be8f3%250x14%3D%3D%3D0x0)'ascFO'!%3D%3D'SFUNi'%3Ffunction()%7Bvar%20_0x3b3300%3D_0x3eedd3%3Bif(_0x3b3300(0x1f1)%3D%3D%3D'SWNEZ')return!!%5B%5D%3Belse%20_0x16e23e%3D_0x188402%3B%7D%5B_0x3eedd3(0x211)%5D('debu'%2B_0x3eedd3(0x202))%5B_0x3eedd3(0x1f3)%5D(_0x3eedd3(0x1f9))%3A_0x3417b9%3D_0x474a74%3Belse%7Bif('obaOi'!%3D%3D_0x3eedd3(0x200))%7Bif(_0x2e1d47)%7Bvar%20_0x75306c%3D_0x3d8226%5B'apply'%5D(_0x19b02a%2Carguments)%3Breturn%20_0x2f5238%3Dnull%2C_0x75306c%3B%7D%7Delse(function()%7Breturn!%5B%5D%3B%7D%5B'constructor'%5D('debu'%2B_0x3eedd3(0x202))%5B_0x3eedd3(0x1ea)%5D(_0x3eedd3(0x212)))%3B%7D%7D_0x359a6f(%2B%2B_0x5be8f3)%3B%7Dtry%7Bif(_0x486d99(0x1f0)%3D%3D%3D'YBOZM')return!%5B%5D%3Belse%7Bif(_0x34a9ca)return%20_0x359a6f%3Belse%20_0x486d99(0x205)%3D%3D%3D'XqhBk'%3F_0x359a6f(0x0)%3Afunction()%7Breturn!!%5B%5D%3B%7D%5B'constructor'%5D(_0x486d99(0x1df)%2B_0x486d99(0x202))%5B_0x486d99(0x1f3)%5D(_0x486d99(0x1f9))%3B%7D%7Dcatch(_0x3cfc0e)%7B%7D%7D%7D)()%3B">
+                YoHoHo.io Hack
+            </a>
+        </div>
+
+        <div class="bookmarklet">
+            <h3>AutoClicker</h3>
+            <p>Allows you to AutoClick 135cps.</p>
+            <a class="button"
+                href="javascript:var DELAY = 1;var autoClickerStyleElement = document.createElement('style');autoClickerStyleElement.innerHTML='*{cursor: crosshair !important;}';document.body.appendChild(autoClickerStyleElement);function addClicker(e) {if(!e.isTrusted) {return;}if(e.target.classList.contains('auto-clicker-target')) {e.target.classList.remove('auto-clicker-target');} else {e.target.classList.add('auto-clicker-target');}document.body.removeChild(autoClickerStyleElement);document.body.removeEventListener('click', addClicker);e.preventDefault();autoClick(e.target);}function autoClick(element) {if(element.classList.contains('auto-clicker-target')) {element.click();setTimeout(function(){ autoClick(element); }, DELAY);}}document.body.addEventListener('click', addClicker, 1);">
+                Activate AutoClicker
+            </a>
+        </div>
+
+        <div class="bookmarklet">
+            <h3>Dark Mode</h3>
+            <p>Makes the background of the tab you are on dark.</p>
+            <a class="button"
+                href="javascript:(function(){var newSS, styles='* { background: black !important; color: #C0C0C0 !important; line-height:1.7em !important} :link, :link * { color: #0099FF !important } :visited, :visited * { color: #6666CC !important }'; if(document.createStyleSheet) { document.createStyleSheet(`javascript: ${styles}`); } else { newSS=document.createElement('link'); newSS.rel='stylesheet'; newSS.href='data:text/css,'+escape(styles); document.getElementsByTagName('head')[0].appendChild(newSS); } })();">
+                Dark Mode
+            </a>
+        </div>
+
+        <div class="bookmarklet"></div>
+        <h3>Force Picture in Picture</h3>
+        <p>Forces the video you are watching to go into picture in picture mode (or just use the built in force in
+            chrome)</p>
+        <a class="button"
+            href="javascript:void function(){let a=!1;document.querySelectorAll('video').forEach(b=>{b.removeAttribute('disablepictureinpicture'),b.disablePictureInPicture=!1,b.paused%26%26'content-video-player'!==b.id||a||'function'!=typeof b.requestPictureInPicture||b.requestPictureInPicture().then(()=>{a=!0}).catch(a=>{console.error(`failed to pop video`,b,a)})})}();">
+            Picture in Picture
+        </a>
+    </div>
+
+    <div class="bookmarklet">
+        <h3>Ants</h3>
+        <p>Adds ants to the webpage</p>
+        <a class="button"
+            href="javascript:document.getElementsByTagName('head')[0].appendChild(document.createElement('script')).setAttribute('src','http://www.cs.huji.ac.il/~irush/scripts/antsbml.js');">
+            Ants
+        </a>
+    </div>
+
+
+    <script src="./js/index.js"></script>
+    <script>
+        function changeTabTitle() {
+            var userInput = document.getElementById('userinput').value;
+            document.querySelector('title').textContent = userInput;
+            localStorage.setItem('tabTitle', userInput);
+        }
+
+        function changeTabIcon() {
+            var userInput = document.getElementById('userinput').value;
+            var favicon = document.getElementById('favicon');
+            favicon.href = userInput;
+            localStorage.setItem('tabIcon', userInput);
+        }
+
+        function resetTabSettings() {
+            document.title = "Settings | IncorHosting";
+            var favicon = document.getElementById('favicon');
+            favicon.href = "/favicon.ico";
+            document.getElementById('userinput').value = '';
+            localStorage.removeItem('tabTitle');
+            localStorage.removeItem('tabIcon');
+        }
+
+        window.addEventListener('load', function () {
+            var storedTitle = localStorage.getItem('tabTitle');
+            var storedIcon = localStorage.getItem('tabIcon');
+            if (storedTitle) {
+                document.querySelector('title').textContent = storedTitle;
+                document.getElementById('userinput').value = storedTitle;
+            }
+            if (storedIcon) {
+                var favicon = document.getElementById('favicon');
+                favicon.href = storedIcon;
+            }
+        });
+    </script>
+    <div id="outdated"></div>
+    <script src="/assets/js/antiad.js" type="module"></script>
+    <script src="/assets/js/easteregg.js" type="module"></script>
+</body>
+
+</html>
