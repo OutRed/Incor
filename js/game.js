@@ -31,7 +31,7 @@ class GameManager {
             }
         });
 
-        fetch('/assets/JSON/games.json')
+        fetch('https://cdn.jsdelivr.net/gh/OutRed/Incor@main/JSON/games.json')
             .then(res => res.json())
             .then(games => {
                 games.forEach(game => {
