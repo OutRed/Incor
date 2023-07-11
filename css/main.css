@@ -44,6 +44,11 @@ h1 {
     color: #fff;
     text-align: center;
 }
+  p {
+    font-size: 45px;
+    color: #fff;
+    text-align: center;
+}
 
 .centered {
     position: absolute;
